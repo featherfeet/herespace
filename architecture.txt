@@ -1,0 +1,21 @@
+* Server
+    * Flask-based
+* Web App
+    * Vue.js-based
+* App
+    * Flutter-based
+
+
+~~~~~~~~~~~~~~~~~Concepts~~~~~~~~~~~~~~~~
+klass -- physical map of the desks in a classroom with students' names attached to each desk -- corresponds to a specific group of students who go to a specific teacher's room at a specific time of day
+assignment -- anything that students are supposed to do
+    -- can be used for attendance
+    -- can be used for classwork
+    -- can be used for homework
+    -- has a point value -- can be extra credit
+participation -- teacher can add infractions/merits to student that aren't attached to a specific assignment
+score -- ONE student's score on a particular assignment
+    -- attached to a specific student and assignment
+student -- a specific student
+    -- has a name
+    -- can be in multiple klasses

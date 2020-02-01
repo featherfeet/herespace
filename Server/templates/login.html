@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/login.css">
+        <meta charset="utf-8" lang="en" />
+        <title>
+            Login to HereSpace
+        </title>
+    </head>
+    <body>
+        <h1>
+            Login to HereSpace
+        </h1>
+        <form action="/login" method="post">
+            {{ form.csrf_token }}
+            <fieldset>
+                <section>
+                    <div>
+                        {{ form.username.label }}
+                        {{ form.username }}
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        {{ form.password.label }}
+                        {{ form.password }}
+                    </div>
+                </section>
+                <section>
+                    {{ form.submit }}
+                </section>
+            </fieldset>
+        </form>
+    </body>
+</html>

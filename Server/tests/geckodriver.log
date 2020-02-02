@@ -1,0 +1,762 @@
+1580583140644	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFT9Y0f"
+1580583141559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580583141559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580583141559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580583141559	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580583143608	Marionette	INFO	Listening on port 37759
+1580583143669	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580583148663	Marionette	INFO	Stopped listening on port 37759
+1580583534391	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoU4hD2"
+1580583535210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580583535210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580583535211	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580583535211	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580583537319	Marionette	INFO	Listening on port 42659
+1580583537430	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580583545673	Marionette	INFO	Stopped listening on port 42659
+1580584231406	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerTueLT"
+1580584232210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580584232210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580584232210	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580584232211	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580584234237	Marionette	INFO	Listening on port 44179
+1580584234320	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580584281464	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBDfxUf"
+1580584282255	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580584282255	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580584282256	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580584282256	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580584284281	Marionette	INFO	Listening on port 45241
+1580584284397	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580584350011	Marionette	INFO	Stopped listening on port 44179
+1580584388245	Marionette	INFO	Stopped listening on port 45241
+1580584436386	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileytobzK"
+1580584437291	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580584437292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580584437292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580584437292	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580584439411	Marionette	INFO	Listening on port 33935
+1580584439502	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580584510686	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTyKuhq"
+1580584511493	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580584511493	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580584511493	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580584511493	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580584513488	Marionette	INFO	Listening on port 45409
+1580584513514	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580584527408	Marionette	INFO	Stopped listening on port 45409
+1580584781034	Marionette	INFO	Stopped listening on port 33935
+1580584782475	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyPQRHX"
+1580584783366	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580584783366	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580584783366	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580584783366	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580584785477	Marionette	INFO	Listening on port 42753
+1580584785526	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580584791797	Marionette	INFO	Stopped listening on port 42753
+1580585051463	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileBJesiM"
+1580585052248	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580585052249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580585052249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580585052249	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580585054260	Marionette	INFO	Listening on port 44285
+1580585054311	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580585069599	Marionette	INFO	Stopped listening on port 44285
+1580615166085	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileeHfUFy"
+1580615166960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580615166960	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580615166961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580615166961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580615169006	Marionette	INFO	Listening on port 44467
+1580615169117	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn0.child1/context18' can't be sent as the connection is closed."
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn1.child1/context18' can't be sent as the connection is closed."
+1580615368281	Marionette	INFO	Stopped listening on port 44467
+1580615454250	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejEJXdx"
+1580615455045	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580615455046	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580615455046	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580615455046	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580615457042	Marionette	INFO	Listening on port 45987
+1580615457095	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 29: TypeError: this.canvas is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 55: ReferenceError: handleDragStart is not defined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 34: TypeError: this.seatings is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 45: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 40: TypeError: this.seatings is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 41: TypeError: this.seatings is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 52: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn0.child1/context18' can't be sent as the connection is closed."
+1580615758253	Marionette	INFO	Stopped listening on port 45987
+1580615766845	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileE031dZ"
+1580615767652	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580615767652	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580615767652	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580615767652	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580615769626	Marionette	INFO	Listening on port 41769
+1580615769684	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn0.child1/context18' can't be sent as the connection is closed."
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 51: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 53: TypeError: this.selected_seating is undefined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 44: TypeError: seating.containsPoint is not a function
+JavaScript warning: https://www.htmlgoodies.com/hqx/sl/?g=js-2.1, line 936: unreachable code after return statement
+JavaScript warning: https://www.htmlgoodies.com/hqx/sl/?g=js-2.1, line 938: unreachable code after return statement
+JavaScript warning: https://www.htmlgoodies.com/hqx/sl/?g=js-2.1, line 939: unreachable code after return statement
+JavaScript warning: https://www.htmlgoodies.com/hqx/sl/?g=js-2.1, line 1257: unreachable code after return statement
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 38: ReferenceError: desk_width is not defined
+JavaScript error: http://localhost:5000/static/scripts/klass_editor.js, line 38: ReferenceError: desk_width is not defined
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn1.child1/context18' can't be sent as the connection is closed."
+[Parent 18235, Gecko_IOThread] WARNING: pipe error (67): Connection reset by peer: file /build/firefox-esr-yQ6FIB/firefox-esr-68.4.1esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 18235, Gecko_IOThread] WARNING: pipe error (34): Connection reset by peer: file /build/firefox-esr-yQ6FIB/firefox-esr-68.4.1esr/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1580617441612	Marionette	INFO	Stopped listening on port 41769
+1580617523169	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNBeWbu"
+1580617523952	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1580617523952	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1580617523953	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1580617523953	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
+1580617525908	Marionette	INFO	Listening on port 34959
+1580617525982	Marionette	WARN	TLS certificate errors will be ignored for this session
+1580617543380	Marionette	INFO	Stopped listening on port 34959

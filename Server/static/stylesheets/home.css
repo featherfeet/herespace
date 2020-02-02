@@ -1,0 +1,9 @@
+.klass_entry {
+    display: block;
+    height: 5vh;
+    width: 80vw;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 5vh;
+}

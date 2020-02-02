@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS seatings
     desk_x REAL,                            -- x-coordinate on the klass diagram of this seat.
     desk_y REAL,                            -- y-coordinate on the klass diagram of this seat.
     desk_width REAL,                        -- width on the klass diagram of this seat.
-    desk_height REAL                        -- height on the klass diagram of this seat.
+    desk_height REAL,                       -- height on the klass diagram of this seat.
+    desk_angle REAL                         -- angle of rotation of this seat on the klass diagram. measured in radians clockwise of horizontal.
 );
 
 -- Each student is stored as a row in the students table.

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/home.css">
+        <meta charset="utf-8" lang="en" />
+        <title>
+            HereSpace: Home
+        </title>
+    </head>
+    <body>
+        <h1>
+            HereSpace: Home
+        </h1>
+        <h2>
+            Classes
+        </h2>
+        {% if klasses|length == 0 %}
+            <p>
+                No classes have been created  yet.
+            </p>
+        {% endif %}
+        {% for klass in klasses %}
+            <a class="buttonlike klass_entry" href="/klass?klass_id={{ klass.klass_id }}">{{ klass.klass_name }}</a>
+        {% endfor %}
+    </body>
+</html>

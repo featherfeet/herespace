@@ -60,6 +60,8 @@ class KlassEditor {
         for (var i = 0; i < self.seatings.length; i++) {
             var seating = self.seatings[i];
             if (seating.containsPoint(event.offsetX, event.offsetY)) {
+                self.grabbed_seating_offset_x = event.offsetX - seating.desk_x;
+                self.grabbed_seating_offset_y = event.offsetY - seating.desk_y;
                 self.grabbed_seating = i;
                 break;
             }

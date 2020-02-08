@@ -6,5 +6,5 @@ from flask import render_template, Flask, request, redirect, url_for
 @login_required
 def klass():
     klass_id = int(request.args.get("klass_id"))
-    klass = database_storage.fetchKlassByKlassId(klass_id)
+    klass = database_storage.fetchKlassByKlassId(current_user.get_id(), klass_id)
     return render_template("klass.html", klass = klass)

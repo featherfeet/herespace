@@ -23,6 +23,7 @@ import login_route
 import logout_route
 import klass_route
 import create_klass_route
+import get_students_route
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0")

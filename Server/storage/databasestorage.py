@@ -2,6 +2,7 @@ import sqlite3
 from passlib.hash import pbkdf2_sha512
 from storage.user import User
 from storage.klass import Klass
+from storage.student import Student
 
 USERS_TABLE_USER_ID_COLUMN = 0
 USERS_TABLE_USERNAME_COLUMN = 1
@@ -13,6 +14,10 @@ USERS_TABLE_STUDENT_ID_COLUMN = 5
 KLASSES_TABLE_KLASS_ID_COLUMN = 0
 KLASSES_TABLE_USER_ID_COLUMN = 1
 KLASSES_TABLE_KLASS_NAME_COLUMN = 2
+
+STUDENTS_TABLE_STUDENT_ID_COLUMN = 0
+STUDENTS_TABLE_STUDENT_NAME_COLUMN = 1
+STUDENTS_TABLE_USER_ID_COLUMN = 2
 
 class DatabaseStorage:
     def __init__(self, database_path):
@@ -42,9 +47,16 @@ class DatabaseStorage:
             klasses.append(Klass(klass_raw[KLASSES_TABLE_KLASS_ID_COLUMN], klass_raw[KLASSES_TABLE_USER_ID_COLUMN], klass_raw[KLASSES_TABLE_KLASS_NAME_COLUMN]))
         return klasses
 
-    def fetchKlassByKlassId(self, klass_id):
-        klasses_raw = self.cursor.execute("SELECT klass_id, user_id, klass_name FROM klasses WHERE klass_id = ?", (klass_id,))
+    def fetchKlassByKlassId(self, user_id, klass_id):
+        klasses_raw = self.cursor.execute("SELECT klass_id, user_id, klass_name FROM klasses WHERE user_id = ? AND klass_id = ?", (user_id, klass_id))
         klass_raw = klasses_raw.fetchone()
         if klass_raw is not None:
             return Klass(klass_raw[KLASSES_TABLE_KLASS_ID_COLUMN], klass_raw[KLASSES_TABLE_USER_ID_COLUMN], klass_raw[KLASSES_TABLE_KLASS_NAME_COLUMN])
         return None
+
+    def fetchStudents(self, user_id):
+        students_raw = self.cursor.execute("SELECT student_id, student_name, user_id FROM students WHERE user_id = ?", (user_id,))
+        students = []
+        for student_raw in students_raw:
+            students.append(Student(student_raw[STUDENTS_TABLE_STUDENT_ID_COLUMN], student_raw[STUDENTS_TABLE_STUDENT_NAME_COLUMN], student_raw[STUDENTS_TABLE_USER_ID_COLUMN]))
+        return students

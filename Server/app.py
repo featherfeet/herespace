@@ -14,15 +14,17 @@ database_storage = DatabaseStorage("herespace.db")
 
 @login_manager.user_loader
 def load_user(user_id):
-    print("loading")
+    print("Loading user...")
     return database_storage.loadUser(user_id)
 
+# Web interface routes.
 import home_route
 import index_route
 import login_route
 import logout_route
 import klass_route
 import create_klass_route
+# API routes.
 import get_students_route
 
 if __name__ == "__main__":

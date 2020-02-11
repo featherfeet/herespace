@@ -10,3 +10,5 @@ wd.get("http://localhost:5000/login")
 wd.find_element_by_css_selector("input[name=username]").send_keys("otrevor")
 wd.find_element_by_css_selector("input[name=password]").send_keys("Chicken5436")
 wd.find_element_by_css_selector("input[name=submit]").click()
+
+wd.get("http://localhost:5000/create_klass")

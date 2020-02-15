@@ -10,7 +10,7 @@ const app = new Vue(
                 var student_select = $("#student_select")[0];
                 var student = new Student(student_select.value, student_select[student_select.selectedIndex].text);
                 var student_schedule = new StudentSchedule(-1, student, -1);
-                var seating = new Seating(-1, student_schedule, 200, 200, 200, 200, 0);
+                var seating = new Seating(-1, student_schedule, 200, 200, 200, 100, 0);
                 this.klass_editor.addSeating(seating);
             }
         },

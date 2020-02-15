@@ -49,3 +49,14 @@ function retrieveStudents() {
         }
     );
 }
+
+// Delete a student by id.
+function deleteStudent(student_id_to_delete) {
+    return new Promise(
+        (resolve, reject) => {
+            $.post("/delete_student", {student_id: student_id_to_delete}, function(data) {
+                resolve();
+            });
+        }
+    );
+}

@@ -60,3 +60,6 @@ class DatabaseStorage:
         for student_raw in students_raw:
             students.append(Student(student_raw[STUDENTS_TABLE_STUDENT_ID_COLUMN], student_raw[STUDENTS_TABLE_STUDENT_NAME_COLUMN], student_raw[STUDENTS_TABLE_USER_ID_COLUMN]))
         return students
+
+    def deleteStudentByStudentId(self, user_id, student_id):
+        self.cursor.execute("DELETE FROM students WHERE user_id = ? AND student_id = ?", (user_id, student_id))

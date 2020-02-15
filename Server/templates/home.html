@@ -23,5 +23,26 @@
         {% for klass in klasses %}
             <a class="buttonlike klass_entry" href="/klass?klass_id={{ klass.klass_id }}">{{ klass.klass_name }}</a>
         {% endfor %}
+        {% raw %}
+        <div id="vue_div">
+            <h2>
+                Students
+            </h2>
+            <table>
+                <tr v-for="(student, student_index) in students" v-bind:key="student.student_id">
+                    <td class="decorated">
+                        {{ student.student_name }}
+                        <a v-on:click="deleteClickedStudent" v-bind:data-student-index="student_index" class="delete_x">
+                            <b>X</b>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        {% endraw %}
+        <script type="text/javascript" src="/static/scripts/vue.js"></script>
+        <script type="text/javascript" src="/static/scripts/jquery.js"></script>
+        <script type="text/javascript" src="/static/scripts/server_api.js"></script>
+        <script type="text/javascript" src="/static/scripts/home.js"></script>
     </body>
 </html>

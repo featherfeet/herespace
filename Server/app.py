@@ -27,6 +27,8 @@ import create_klass_route
 # API routes.
 import get_students_route
 import delete_student_route
+import create_student_route
+import create_klass_route
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0")

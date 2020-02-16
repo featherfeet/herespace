@@ -2,7 +2,8 @@ const app = new Vue(
     {
         el: "#vue_div",
         data: {
-            students: []
+            students: [],
+            student_to_create_name: ""
         },
         methods: {
             deleteClickedStudent: function(event) {
@@ -12,6 +13,14 @@ const app = new Vue(
                 deleteStudent(this.students[student_index].student_id);
                 // Remove the clicked student from the Vue.js template.
                 this.students.splice(student_index, 1);
+            },
+            createStudentOnClick: function(event) {
+                var self = this;
+                var student_name = self.student_to_create_name;
+                self.student_to_create_name = "";
+                createStudent(student_name).then(function(student_id) {
+                    self.students.push(new Student(student_id, student_name));
+                });
             }
         },
         mounted: function() {

@@ -1,4 +1,5 @@
 import sqlite3
+import threading
 from passlib.hash import pbkdf2_sha512
 from storage.user import User
 from storage.klass import Klass
@@ -21,7 +22,8 @@ STUDENTS_TABLE_USER_ID_COLUMN = 2
 
 class DatabaseStorage:
     def __init__(self, database_path):
-        self.conn = sqlite3.connect(database_path, check_same_thread = False)
+        self.conn_lock = threading.Lock()
+        self.conn = sqlite3.connect(database_path, check_same_thread = False, isolation_level = None)
         self.cursor = self.conn.cursor()
 
     def loadUser(self, user_id):
@@ -63,3 +65,17 @@ class DatabaseStorage:
 
     def deleteStudentByStudentId(self, user_id, student_id):
         self.cursor.execute("DELETE FROM students WHERE user_id = ? AND student_id = ?", (user_id, student_id))
+
+    def createStudent(self, user_id, student_name):
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO students (student_name, user_id) VALUES (?, ?)", (student_name, user_id))
+        student_id = self.cursor.lastrowid
+        self.conn_lock.release()
+        return student_id
+
+    def createKlass(self, user_id, klass_name):
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO klasses (user_id, klass_name) VALUES (?, ?)", (user_id, klass_name))
+        klass_id = self.cursor.lastrowid
+        self.conn_lock.release()
+        return klass_id

@@ -60,3 +60,14 @@ function deleteStudent(student_id_to_delete) {
         }
     );
 }
+
+// Create a new student and return its id.
+function createStudent(student_name_to_create) {
+    return new Promise(
+        (resolve, reject) => {
+            $.post("/create_student", {student_name: student_name_to_create}, function(data) {
+                resolve(parseInt(data));
+            });
+        }
+    );
+}

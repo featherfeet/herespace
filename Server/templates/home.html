@@ -24,17 +24,28 @@
             <a class="buttonlike klass_entry" href="/klass?klass_id={{ klass.klass_id }}">{{ klass.klass_name }}</a>
         {% endfor %}
         {% raw %}
+        <a class="buttonlike klass_entry" href="/create_klass">
+            <b class="add_plus">+</b> Create New Class
+        </a>
         <div id="vue_div">
             <h2>
-                Students
+                Students ({{ students.length }})
             </h2>
             <table>
                 <tr v-for="(student, student_index) in students" v-bind:key="student.student_id">
                     <td class="decorated">
                         {{ student.student_name }}
-                        <a v-on:click="deleteClickedStudent" v-bind:data-student-index="student_index" class="delete_x">
-                            <b>X</b>
+                        <a v-on:click="deleteClickedStudent" v-bind:data-student-index="student_index">
+                            <b class="delete_x">X</b>
                         </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="decorated">
+                        Create Student: <input type="text" v-model="student_to_create_name" v-on:keyup.enter="createStudentOnClick" placeholder="Student Name" />
+                        <button v-on:click="createStudentOnClick" id="create_student_button">
+                            <b class="add_plus">+</b>
+                        </button>
                     </td>
                 </tr>
             </table>

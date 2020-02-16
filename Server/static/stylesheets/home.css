@@ -6,8 +6,17 @@
     text-decoration: none;
     vertical-align: middle;
     line-height: 5vh;
+    margin-bottom: 5px;
 }
 
 .delete_x {
+    color: red;
+}
+
+.add_plus {
+    color: green;
+}
+
+#create_student_button {
     color: red;
 }

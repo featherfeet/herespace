@@ -96,8 +96,11 @@ class KlassEditor {
         this.redraw();
     }
 
+    getSeatings() {
+        return this.seatings;
+    }
+
     redraw(event) {
-        console.log("Redrawing...");
         // JS hackery to allow redraw() to be used as a JQuery event callback with the KlassEditor object passed as "event.data".
         var self = null;
         if (event == null) {

@@ -9,10 +9,13 @@
         </title>
     </head>
     <body>
-        <h1>
-            Creating New Class
-        </h1>
         <div id="vue_div">
+            <h1>
+                Creating New Class: {{ klass_name }}
+            </h1>
+            <div class="decorated">
+                Class Name: <input type="text" v-model="klass_name" placeholder="Class Name" />
+            </div>
             <div class="decorated">
                 <select id="student_select">
                     <option v-for="student in students" v-bind:value="student.student_id">{{ student.student_name }}</option>
@@ -21,6 +24,9 @@
                     + Add Student to Seating Chart
                 </button>
             </div>
+            <button v-on:click="finishCreatingKlass">
+                Finish Creating Class
+            </button>
             <div class="decorated">
                 <span>Rotate selected seating: </span> <input type="range" id="rotate_seating_slider" />
             </div>

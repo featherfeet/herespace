@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS klasses
 CREATE TABLE IF NOT EXISTS seatings
 (
     seating_id INTEGER PRIMARY KEY,         -- Each seating (a student-desk pairing) has a unique id.
+    user_id INTEGER,                        -- Id of the user who owns this seating.
     student_schedule_id INTEGER,            -- References the student-klass pairing that is associated with this seating.
     desk_x REAL,                            -- x-coordinate on the klass diagram of this seat.
     desk_y REAL,                            -- y-coordinate on the klass diagram of this seat.

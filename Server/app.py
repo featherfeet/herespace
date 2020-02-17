@@ -22,6 +22,7 @@ import home_route
 import index_route
 import login_route
 import logout_route
+import signup_route
 import klass_route
 import create_klass_route
 # API routes.

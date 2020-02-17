@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/signup.css">
+        <meta charset="utf-8" lang="en" />
+        <title>
+            Sign Up
+        </title>
+    </head>
+    <body>
+        <h1>
+            Sign Up for a New HereSpace Account
+        </h1>
+        <p>
+            Note: This page is for creating new <b>teacher</b> accounts only. If you are a student and you want an account to view your scores, please ask your teacher to issue you one.
+        </p>
+        <form action="/signup" method="post">
+            {{ form.csrf_token }}
+            <fieldset>
+                <section>
+                    <div>
+                        {{ form.username.label }}
+                        {{ form.username }}
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        {{ form.password.label }}
+                        {{ form.password }}
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        {{ form.email.label }}
+                        {{ form.email }}
+                    </div>
+                </section>
+                <section>
+                    {{ form.submit }}
+                </section>
+            </fieldset>
+        </form>
+    </body>
+</html>

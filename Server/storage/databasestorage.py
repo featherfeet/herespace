@@ -42,6 +42,14 @@ class DatabaseStorage:
             return User(user[USERS_TABLE_USER_ID_COLUMN], username, user[USERS_TABLE_PASSWORD_HASHED_AND_SALTED_COLUMN], user[USERS_TABLE_EMAIL_COLUMN], user[USERS_TABLE_USER_TYPE_COLUMN], user[USERS_TABLE_STUDENT_ID_COLUMN], is_authenticated = True, is_active = True, is_anonymous = False)
         return None
 
+    def createTeacherUser(self, username, password, email):
+        password_hashed_and_salted = pbkdf2_sha512.hash(password)
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO users (username, password_hashed_and_salted, email, user_type, student_id) VALUES (?, ?, ?, 'teacher', NULL)", (username, password_hashed_and_salted, email))
+        user_id = self.cursor.lastrowid
+        self.conn_lock.release()
+        return User(user_id, username, password_hashed_and_salted, email, "teacher", None, is_authenticated = True, is_active = True, is_anonymous = False)
+
     def fetchKlassesByUserId(self, user_id):
         klasses_raw = self.cursor.execute("SELECT klass_id, user_id, klass_name FROM klasses WHERE user_id = ?", (user_id,))
         klasses = []
@@ -79,3 +87,17 @@ class DatabaseStorage:
         klass_id = self.cursor.lastrowid
         self.conn_lock.release()
         return klass_id
+
+    def createStudentSchedule(self, user_id, student_id, klass_id):
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO student_schedules (user_id, student_id, klass_id) VALUES (?, ?, ?)", (user_id, student_id, klass_id))
+        student_schedule_id = self.cursor.lastrowid
+        self.conn_lock.release()
+        return student_schedule_id
+
+    def createSeating(self, user_id, student_schedule_id, desk_x, desk_y, desk_width, desk_height, desk_angle):
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO seatings (user_id, student_schedule_id, desk_x, desk_y, desk_width, desk_height, desk_angle) VALUES (?, ?, ?, ?, ?, ?, ?)", (user_id, student_schedule_id, desk_x, desk_y, desk_width, desk_height, desk_angle))
+        seating_id = self.cursor.lastrowid
+        self.conn_lock.release()
+        return seating_id

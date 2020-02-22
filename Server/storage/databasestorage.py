@@ -25,6 +25,8 @@ class DatabaseStorage:
         self.conn_lock = threading.Lock()
         self.conn = sqlite3.connect(database_path, check_same_thread = False, isolation_level = None)
         self.cursor = self.conn.cursor()
+        # Enable foreign keys so that DELETE CASCADE columns automatically delete all data related to deleted objects (see "createschema.sql").
+        self.cursor.execute("PRAGMA foreign_keys = on")
 
     def loadUser(self, user_id):
         users = self.cursor.execute("SELECT user_id, username, password_hashed_and_salted, email, user_type, student_id FROM users WHERE user_id = ?", (user_id,))
@@ -72,6 +74,10 @@ class DatabaseStorage:
         return students
 
     def deleteStudentByStudentId(self, user_id, student_id):
+        try:
+            student_id = int(student_id)
+        except ValueError:
+            return
         self.cursor.execute("DELETE FROM students WHERE user_id = ? AND student_id = ?", (user_id, student_id))
 
     def createStudent(self, user_id, student_name):

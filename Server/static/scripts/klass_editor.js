@@ -27,7 +27,9 @@ class KlassEditor {
                 self.grabbed_seating_offset_y = event.offsetY - seating.desk_y;
                 self.grabbed_seating = i;
                 self.selected_seating = i;
-                self.rotate_seating_slider.value = seating.desk_angle * (180.0 / Math.PI);
+                if (self.rotate_seating_slider != null) {
+                    self.rotate_seating_slider.value = seating.desk_angle * (180.0 / Math.PI);
+                }
                 break;
             }
         }
@@ -78,11 +80,13 @@ class KlassEditor {
         this.canvas_element = canvas_element;
         // The slider (<input type="range">) used to rotate seats.
         this.rotate_seating_slider = rotate_seating_slider;
-        this.rotate_seating_slider.min = -180.0;
-        this.rotate_seating_slider.max = 180.0;
-        this.rotate_seating_slider.step = 1.0;
-        this.rotate_seating_slider.value = 0.0;
-        $(this.rotate_seating_slider).on("input", null, this, this.handleRotateSeating);
+        if (rotate_seating_slider != null) {
+            this.rotate_seating_slider.min = -180.0;
+            this.rotate_seating_slider.max = 180.0;
+            this.rotate_seating_slider.step = 1.0;
+            this.rotate_seating_slider.value = 0.0;
+            $(this.rotate_seating_slider).on("input", null, this, this.handleRotateSeating);
+        }
         // Used to calculate clicks and scalings for HiDPI displays.
         this.devicePixelRatio = 1.0;
         // Initialize the canvas for HiDPI displays.

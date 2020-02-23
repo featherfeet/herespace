@@ -4,6 +4,14 @@ class Student {
         this.student_id = student_id;
         this.student_name = student_name;
     }
+
+    // Take a raw object (usually one decoded from JSON) and turn it into a Student object (one where methods work).
+    static fromRawObject(raw_student) {
+        return new Student(
+            raw_student.student_id,
+            raw_student.student_name
+        );
+    }
 }
 
 // Represents a student scheduling object from the "student_schedules" database table.
@@ -12,6 +20,16 @@ class StudentSchedule {
         this.student_schedule_id = student_schedule_id;
         this.student = student;
         this.klass_id = klass_id;
+    }
+
+    // Take a raw object (usually one decoded from JSON) and turn it into a StudentSchedule object (one where methods work).
+    static fromRawObject(raw_student_schedule) {
+        var student = Student.fromRawObject(raw_student_schedule.student);
+        return new StudentSchedule(
+            raw_student_schedule.student_schedule_id,
+            student,
+            raw_student_schedule.klass_id
+        );
     }
 }
 
@@ -32,6 +50,18 @@ class Seating {
         // Returns true if the point is within half of a diagonal of the center of the desk. This makes grabbing rotated desks easier.
         var desk_diagonal = Math.hypot(this.desk_width, this.desk_height);
         return distance(x, y, this.desk_x + this.desk_width / 2.0, this.desk_y + this.desk_height / 2.0) <= desk_diagonal / 2.0;
+    }
+    
+    // Take a raw object (usually one decoded from JSON) and turn it into a Seating object (one where methods work).
+    static fromRawObject(raw_seating) {
+        var student_schedule = StudentSchedule.fromRawObject(raw_seating.student_schedule);
+        return new Seating(raw_seating.seating_id,
+                          student_schedule,
+                          raw_seating.desk_x,
+                          raw_seating.desk_y,
+                          raw_seating.desk_width,
+                          raw_seating.desk_height,
+                          raw_seating.desk_angle);
     }
 }
 
@@ -67,6 +97,18 @@ function createStudent(student_name_to_create) {
         (resolve, reject) => {
             $.post("/create_student", {student_name: student_name_to_create}, function(data) {
                 resolve(parseInt(data));
+            });
+        }
+    );
+}
+
+// Retrieve all seatings from a specific klass from the server.
+function retrieveSeatings(klass_id_to_fetch) {
+    return new Promise(
+        (resolve, reject) => {
+            $.getJSON("/get_seatings", {klass_id: klass_id_to_fetch}, function(seatings_raw) {
+                var seatings = seatings_raw.map(seating_raw => Seating.fromRawObject(seating_raw));
+                resolve(seatings);
             });
         }
     );

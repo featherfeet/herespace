@@ -41,7 +41,7 @@ const app = new Vue(
             // Initialize the canvas's klass editor.
             var canvas = $("canvas")[0];
             var rotate_seating_slider = $("#rotate_seating_slider")[0];
-            self.klass_editor = new KlassEditor(canvas, rotate_seating_slider);
+            self.klass_editor = new KlassEditor(canvas, rotate_seating_slider, true);
         }
     }
 );

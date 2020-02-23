@@ -66,7 +66,7 @@ class KlassEditor {
         $(this.canvas_element).on("mouseup", null, this, this.handleDragEnd);
     }
 
-    constructor(canvas_element, rotate_seating_slider) {
+    constructor(canvas_element, rotate_seating_slider, editable) {
         // Array of all seatings (Seating objects) being displayed.
         this.seatings = new Array();
         // The index (in the this.seatings array) of the seating currently being drag-and-dropped.
@@ -92,7 +92,9 @@ class KlassEditor {
         // Initialize the canvas for HiDPI displays.
         this.initializeCanvasContextWithDPI(800, 800);
         // Initialize the mouse interaction handlers for the canvas.
-        this.initializeCanvasHandlers();
+        if (editable) {
+            this.initializeCanvasHandlers();
+        }
     }
 
     addSeating(seating) {
@@ -102,6 +104,11 @@ class KlassEditor {
 
     getSeatings() {
         return this.seatings;
+    }
+
+    setSeatings(seatings) {
+        this.seatings = seatings;
+        this.redraw();
     }
 
     redraw(event) {

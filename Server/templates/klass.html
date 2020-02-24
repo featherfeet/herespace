@@ -14,6 +14,28 @@
         </h1>
         {% raw %}
         <div id="vue_div">
+            <h2>
+                Assignments ({{ assignments.length }})
+            </h2>
+            <table>
+                <tr v-for="(assignment, assignment_index) in assignments" v-bind:key="assignment.assignment_id">
+                    <td class="decorated">
+                        {{ assignment.assignment_name }} ({{ assignment.points }} points)
+                        <a v-on:click="deleteClickedAssignment" v-bind:data-assignment-index="assignment_index">
+                            <b class="delete_x">X</b>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="decorated">
+                        Create Assignment: <input type="text" v-model="assignment_to_create_name" v-on:keyup.enter="createAssignmentOnClick" placeholder="Assignment Name" />
+                        <input type="number" v-model="assignment_to_create_points" v-on:keyup.enter="createAssignmentOnClick" placeholder="Point Value" />
+                        <button v-on:click="createAssignmentOnClick" id="create_assignment_button">
+                            <b class="add_plus">+</b>
+                        </button>
+                    </td>
+                </tr>
+            </table>
             <canvas id="klass_editor_canvas">
                 Your browser does not support the HTML5 Canvas. Please choose a browser from this millennium.
             </canvas>

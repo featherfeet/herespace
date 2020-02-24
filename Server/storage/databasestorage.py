@@ -6,6 +6,7 @@ from storage.klass import Klass
 from storage.student import Student
 from storage.studentschedule import StudentSchedule
 from storage.seating import Seating
+from storage.assignment import Assignment
 
 USERS_TABLE_USER_ID_COLUMN = 0
 USERS_TABLE_USERNAME_COLUMN = 1
@@ -22,6 +23,12 @@ STUDENTS_TABLE_STUDENT_ID_COLUMN = 0
 STUDENTS_TABLE_STUDENT_NAME_COLUMN = 1
 STUDENTS_TABLE_USER_ID_COLUMN = 2
 
+ASSIGNMENTS_TABLE_ASSIGNMENT_ID_COLUMN = 0
+ASSIGNMENTS_TABLE_USER_ID_COLUMN = 1
+ASSIGNMENTS_TABLE_KLASS_ID_COLUMN = 2
+ASSIGNMENTS_TABLE_ASSIGNMENT_NAME_COLUMN = 3
+ASSIGNMENTS_TABLE_POINTS_COLUMN = 4
+
 class DatabaseStorage:
     def __init__(self, database_path):
         self.conn_lock = threading.Lock()
@@ -33,8 +40,10 @@ class DatabaseStorage:
     def loadUser(self, user_id):
         user_id = int(user_id)
         
+        self.conn_lock.acquire()
         users = self.cursor.execute("SELECT user_id, username, password_hashed_and_salted, email, user_type, student_id FROM users WHERE user_id = ?", (user_id,))
         user = users.fetchone()
+        self.conn_lock.release()
         if user is None:
             return None
         return User(user_id, user[USERS_TABLE_USERNAME_COLUMN], user[USERS_TABLE_PASSWORD_HASHED_AND_SALTED_COLUMN], user[USERS_TABLE_EMAIL_COLUMN], user[USERS_TABLE_USER_TYPE_COLUMN], user[USERS_TABLE_STUDENT_ID_COLUMN], is_authenticated = True, is_active = True, is_anonymous = False)
@@ -161,7 +170,7 @@ class DatabaseStorage:
                                        AND
                                        student_schedules.klass_id = ?""", (user_id, klass_id))
         seatings = []
-        for row in raw_data.fetchall():
+        for row in raw_data:
             seating_id = row[0]
             student_schedule_id = row[1]
             desk_x = row[2]
@@ -178,3 +187,43 @@ class DatabaseStorage:
 
             seatings.append(seating)
         return seatings
+
+    def createAssignment(self, user_id, klass_id, assignment_name, points):
+        user_id = int(user_id)
+        klass_id = int(klass_id)
+        assignment_name = str(assignment_name)
+        points = float(points)
+
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO assignments (user_id, klass_id, assignment_name, points) VALUES (?, ?, ?, ?)", (user_id, klass_id, assignment_name, points))
+        assignment_id = self.cursor.lastrowid
+        self.conn_lock.release()
+        return assignment_id
+        
+    def deleteAssignmentByAssignmentId(self, user_id, assignment_id):
+        user_id = int(user_id)
+        assignment_id = int(assignment_id)
+
+        self.cursor.execute("DELETE FROM assignments WHERE user_id = ? AND assignment_id = ?", (user_id, assignment_id))
+        
+    def fetchAssignmentsByKlassId(self, user_id, klass_id):
+        user_id = int(user_id)
+        klass_id = int(klass_id)
+
+        self.conn_lock.acquire()
+        assignments_raw = self.cursor.execute("SELECT assignment_id, user_id, klass_id, assignment_name, points FROM assignments WHERE user_id = ? AND klass_id = ?", (user_id, klass_id))
+        assignments = []
+
+        for assignment_raw in assignments_raw:
+            assignment_id = int(assignment_raw[ASSIGNMENTS_TABLE_ASSIGNMENT_ID_COLUMN])
+            user_id = int(assignment_raw[ASSIGNMENTS_TABLE_USER_ID_COLUMN])
+            klass_id = int(assignment_raw[ASSIGNMENTS_TABLE_KLASS_ID_COLUMN])
+            assignment_name = str(assignment_raw[ASSIGNMENTS_TABLE_ASSIGNMENT_NAME_COLUMN])
+            points = float(assignment_raw[ASSIGNMENTS_TABLE_POINTS_COLUMN])
+            
+            assignment = Assignment(assignment_id, user_id, klass_id, assignment_name, points)
+            assignments.append(assignment)
+
+        self.conn_lock.release()
+
+        return assignments

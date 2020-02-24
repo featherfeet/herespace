@@ -31,6 +31,9 @@ import delete_student_route
 import create_student_route
 import create_klass_route
 import get_seatings_route
+import get_assignments_route
+import create_assignment_route
+import delete_assignment_route
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0")

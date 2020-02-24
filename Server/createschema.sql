@@ -62,8 +62,9 @@ CREATE TABLE IF NOT EXISTS student_schedules
 -- This table stores assignments, which are tasks assigned to students to earn points.
 CREATE TABLE IF NOT EXISTS assignments
 (
-    assignment_id INTEGER PRIMARY KEY,                   -- The assignment has a unique id.
-    user_id REFERENCES users(user_id) ON DELETE CASCADE, -- Id of the user who owns this assignment.
-    assignment_name TEXT,                                -- Title of the assignment.
-    points REAL                                          -- How many points the assignment is worth.
+    assignment_id INTEGER PRIMARY KEY,                       -- The assignment has a unique id.
+    user_id REFERENCES users(user_id) ON DELETE CASCADE,     -- Id of the user who owns this assignment.
+    klass_id REFERENCES klasses(klass_id) ON DELETE CASCADE, -- Id of the klass that the assignment was assigned to.
+    assignment_name TEXT,                                    -- Title of the assignment.
+    points REAL                                              -- How many points the assignment is worth.
 );

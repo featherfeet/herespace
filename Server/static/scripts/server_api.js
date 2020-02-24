@@ -65,6 +65,28 @@ class Seating {
     }
 }
 
+// Class to represent an assignment from the "assignments" table in the database.
+class Assignment {
+    constructor(assignment_id, user_id, klass_id, assignment_name, points) {
+        this.assignment_id = assignment_id;
+        this.user_id = user_id;
+        this.klass_id = klass_id;
+        this.assignment_name = assignment_name;
+        this.points = points;
+    }
+    
+    // Take a raw object (usually one decoded from JSON) and turn it into an Assignment object (one where methods work).
+    static fromRawObject(raw_assignment) {
+        return new Assignment(
+            raw_assignment.assignment_id,
+            raw_assignment.user_id,
+            raw_assignment.klass_id,
+            raw_assignment.assignment_name,
+            raw_assignment.points
+        );
+    }
+}
+
 // Retrieve all students from the server.
 function retrieveStudents() {
     return new Promise(
@@ -109,6 +131,40 @@ function retrieveSeatings(klass_id_to_fetch) {
             $.getJSON("/get_seatings", {klass_id: klass_id_to_fetch}, function(seatings_raw) {
                 var seatings = seatings_raw.map(seating_raw => Seating.fromRawObject(seating_raw));
                 resolve(seatings);
+            });
+        }
+    );
+}
+
+// Retrieve all assignments from a specific klass on the server.
+function retrieveAssignmentsByKlassId(klass_id_to_fetch) {
+    return new Promise(
+        (resolve, reject) => {
+            $.getJSON("/get_assignments", {klass_id: klass_id_to_fetch}, function(assignments_raw) {
+                var assignments = assignments_raw.map(assignments_raw => Assignment.fromRawObject(assignment_raw));
+                resolve(assignments);
+            });
+        }
+    );
+}
+
+// Create a new assignment and return its id.
+function createAssignment(assignment_name_to_create, assignment_points_to_create, klass_id_to_create) {
+    return new Promise(
+        (resolve, reject) => {
+            $.post("/create_assignment", {assignment_name: assignment_name_to_create, assignment_points: assignment_points_to_create, klass_id: klass_id_to_create}, function(data) {
+                resolve(parseInt(data));
+            });
+        }
+    );
+}
+
+// Delete a assignment by id.
+function deleteAssignment(assignment_id_to_delete) {
+    return new Promise(
+        (resolve, reject) => {
+            $.post("/delete_assignment", {assignment_id: assignment_id_to_delete}, function(data) {
+                resolve();
             });
         }
     );

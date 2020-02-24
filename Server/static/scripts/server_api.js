@@ -141,7 +141,7 @@ function retrieveAssignmentsByKlassId(klass_id_to_fetch) {
     return new Promise(
         (resolve, reject) => {
             $.getJSON("/get_assignments", {klass_id: klass_id_to_fetch}, function(assignments_raw) {
-                var assignments = assignments_raw.map(assignments_raw => Assignment.fromRawObject(assignment_raw));
+                var assignments = assignments_raw.map(assignment_raw => Assignment.fromRawObject(assignment_raw));
                 resolve(assignments);
             });
         }

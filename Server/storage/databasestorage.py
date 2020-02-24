@@ -52,8 +52,10 @@ class DatabaseStorage:
         username = str(username)
         password = str(password)
         
+        self.conn_lock.acquire()
         users = self.cursor.execute("SELECT user_id, username, password_hashed_and_salted, email, user_type, student_id FROM users WHERE username = ?", (username,))
         user = users.fetchone()
+        self.conn_lock.release()
         if user is None:
             return None
         if pbkdf2_sha512.verify(password, user[USERS_TABLE_PASSWORD_HASHED_AND_SALTED_COLUMN]):
@@ -75,18 +77,22 @@ class DatabaseStorage:
     def fetchKlassesByUserId(self, user_id):
         user_id = int(user_id)
         
+        self.conn_lock.acquire()
         klasses_raw = self.cursor.execute("SELECT klass_id, user_id, klass_name FROM klasses WHERE user_id = ?", (user_id,))
         klasses = []
         for klass_raw in klasses_raw:
             klasses.append(Klass(klass_raw[KLASSES_TABLE_KLASS_ID_COLUMN], klass_raw[KLASSES_TABLE_USER_ID_COLUMN], klass_raw[KLASSES_TABLE_KLASS_NAME_COLUMN]))
+        self.conn_lock.release()
         return klasses
 
     def fetchKlassByKlassId(self, user_id, klass_id):
         user_id = int(user_id)
         klass_id = int(klass_id)
 
+        self.conn_lock.acquire()
         klasses_raw = self.cursor.execute("SELECT klass_id, user_id, klass_name FROM klasses WHERE user_id = ? AND klass_id = ?", (user_id, klass_id))
         klass_raw = klasses_raw.fetchone()
+        self.conn_lock.release()
         if klass_raw is not None:
             return Klass(klass_raw[KLASSES_TABLE_KLASS_ID_COLUMN], klass_raw[KLASSES_TABLE_USER_ID_COLUMN], klass_raw[KLASSES_TABLE_KLASS_NAME_COLUMN])
         return None
@@ -94,10 +100,12 @@ class DatabaseStorage:
     def fetchStudents(self, user_id):
         user_id = int(user_id)
         
+        self.conn_lock.acquire()
         students_raw = self.cursor.execute("SELECT student_id, student_name, user_id FROM students WHERE user_id = ?", (user_id,))
         students = []
         for student_raw in students_raw:
             students.append(Student(student_raw[STUDENTS_TABLE_STUDENT_ID_COLUMN], student_raw[STUDENTS_TABLE_STUDENT_NAME_COLUMN], student_raw[STUDENTS_TABLE_USER_ID_COLUMN]))
+        self.conn_lock.release()
         return students
 
     def deleteStudentByStudentId(self, user_id, student_id):
@@ -108,7 +116,9 @@ class DatabaseStorage:
             student_id = int(student_id)
         except ValueError:
             return
+        self.conn_lock.acquire()
         self.cursor.execute("DELETE FROM students WHERE user_id = ? AND student_id = ?", (user_id, student_id))
+        self.conn_lock.release()
 
     def createStudent(self, user_id, student_name):
         user_id = int(user_id)
@@ -160,6 +170,7 @@ class DatabaseStorage:
         user_id = int(user_id)
         klass_id = int(klass_id)
         
+        self.conn_lock.acquire()
         raw_data = self.cursor.execute("""SELECT seatings.seating_id, seatings.student_schedule_id, seatings.desk_x, seatings.desk_y, seatings.desk_width, seatings.desk_height, seatings.desk_angle, students.student_id, students.student_name FROM student_schedules
                                    INNER JOIN seatings
                                        ON student_schedules.student_schedule_id = seatings.student_schedule_id
@@ -186,6 +197,7 @@ class DatabaseStorage:
             seating = Seating(seating_id, student_schedule, desk_x, desk_y, desk_width, desk_height, desk_angle)
 
             seatings.append(seating)
+        self.conn_lock.release()
         return seatings
 
     def createAssignment(self, user_id, klass_id, assignment_name, points):
@@ -204,7 +216,9 @@ class DatabaseStorage:
         user_id = int(user_id)
         assignment_id = int(assignment_id)
 
+        self.conn_lock.acquire()
         self.cursor.execute("DELETE FROM assignments WHERE user_id = ? AND assignment_id = ?", (user_id, assignment_id))
+        self.conn_lock.release()
         
     def fetchAssignmentsByKlassId(self, user_id, klass_id):
         user_id = int(user_id)

@@ -51,3 +51,11 @@ input.wrong {
 .hidden {
     display: none;
 }
+
+.delete_x {
+    color: red;
+}
+
+.add_plus {
+    color: green;
+}

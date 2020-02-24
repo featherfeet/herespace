@@ -29,7 +29,7 @@
                 <tr>
                     <td class="decorated">
                         Create Assignment: <input type="text" v-model="assignment_to_create_name" v-on:keyup.enter="createAssignmentOnClick" placeholder="Assignment Name" />
-                        <input type="number" v-model="assignment_to_create_points" v-on:keyup.enter="createAssignmentOnClick" placeholder="Point Value" />
+                        <input type="number" v-model="assignment_to_create_points" v-on:keyup.enter="createAssignmentOnClick" id="point_value_input" placeholder="Point Value" />
                         <button v-on:click="createAssignmentOnClick" id="create_assignment_button">
                             <b class="add_plus">+</b>
                         </button>

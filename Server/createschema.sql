@@ -68,3 +68,14 @@ CREATE TABLE IF NOT EXISTS assignments
     assignment_name TEXT,                                    -- Title of the assignment.
     points REAL                                              -- How many points the assignment is worth.
 );
+
+-- This table stores students' scores on assignments over time (which can be changed as a teacher sees fit).
+-- Each entry is a score on a particular assignment at a particular time.
+CREATE TABLE IF NOT EXISTS scores
+(
+    score_id INTEGER PRIMARY KEY,                                                            -- Each score has a unique id.
+    user_id REFERENCES users(user_id) ON DELETE CASCADE,                                     -- Id of the user who set this score (the id of the teacher's account).
+    assignment_id REFERENCES assignments(assignment_id) ON DELETE CASCADE,                   -- Id of the assignment that this score is for.
+    student_schedule_id REFERENCES student_schedules(student_schedule_id) ON DELETE CASCADE, -- Id of the student schedule (student-klass pairing) that this score is for.
+    points REAL                                                                              -- How many points the student had earned on the assignment at this time.
+);

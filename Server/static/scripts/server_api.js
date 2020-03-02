@@ -45,11 +45,16 @@ class Seating {
         this.desk_angle = desk_angle;
     }
 
+    // Calculate distance between two points.
+    static distance(x1, y1, x2, y2) {
+        return Math.hypot(x2 - x1, y2 - y1);
+    }
+
     // Check if this seating contains a geometric point.
     containsPoint(x, y) {
         // Returns true if the point is within half of a diagonal of the center of the desk. This makes grabbing rotated desks easier.
         var desk_diagonal = Math.hypot(this.desk_width, this.desk_height);
-        return distance(x, y, this.desk_x + this.desk_width / 2.0, this.desk_y + this.desk_height / 2.0) <= desk_diagonal / 2.0;
+        return Seating.distance(x, y, this.desk_x + this.desk_width / 2.0, this.desk_y + this.desk_height / 2.0) <= desk_diagonal / 2.0;
     }
     
     // Take a raw object (usually one decoded from JSON) and turn it into a Seating object (one where methods work).

@@ -7,6 +7,7 @@ from storage.student import Student
 from storage.studentschedule import StudentSchedule
 from storage.seating import Seating
 from storage.assignment import Assignment
+from storage.score import Score
 
 USERS_TABLE_USER_ID_COLUMN = 0
 USERS_TABLE_USERNAME_COLUMN = 1
@@ -241,3 +242,26 @@ class DatabaseStorage:
         self.conn_lock.release()
 
         return assignments
+
+    def setScore(self, user_id, assignment_id, student_schedule_id, points):
+        user_id = int(user_id)
+        assignment_id = int(assignment_id)
+        student_schedule_id = int(student_schedule_id)
+        points = float(points)
+        self.conn_lock.acquire()
+        self.cursor.execute("INSERT INTO scores (user_id, assignment_id, student_schedule_id, points) VALUES (?, ?, ?, ?)", (user_id, assignment_id, student_schedule_id, points))
+        self.conn_lock.release()
+
+    def getScoresByAssignmentId(self, user_id, assignment_id):
+        self.conn_lock.acquire()
+        scores_raw = self.cursor.execute("SELECT score_id, student_schedule_id, points FROM scores WHERE user_id = ? AND assignment_id = ?", (user_id, assignment_id))
+        scores = []
+        for score_raw in scores_raw:
+            score_id = int(score_raw[0])
+            student_schedule_id = int(score_raw[1])
+            points = float(score_raw[2])
+
+            score = Score(score_id, user_id, assignment_id, student_schedule_id, points)
+            scores.append(score)
+        self.conn_lock.release()
+        return scores

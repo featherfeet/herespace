@@ -36,6 +36,15 @@
                     </td>
                 </tr>
             </table>
+            <h2>
+                Grading
+            </h2>
+            <p>
+                Select an assignment to grade:
+            </p>
+            <select id="assignment_select">
+                <option v-for="assignment in assignments" v-bind:value="assignment.assignment_id">{{ assignment.assignment_name }}</option>
+            </select>
             <canvas id="klass_editor_canvas">
                 Your browser does not support the HTML5 Canvas. Please choose a browser from this millennium.
             </canvas>

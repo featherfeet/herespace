@@ -1,152 +1,48 @@
-class KlassEditor {
-    initializeCanvasContextWithDPI(width, height) {
-        var devicePixelRatio = window.devicePixelRatio || 1;
-        this.devicePixelRatio = devicePixelRatio;
-        console.log(`this.devicePixelRatio: ${this.devicePixelRatio}`);
-        this.canvas_element.width = width * devicePixelRatio;
-        this.canvas_element.height = height * devicePixelRatio;
-        this.canvas_element.style.width = `${width}px`;
-        this.canvas_element.style.height = `${height}px`;
-        this.ctx = this.canvas_element.getContext("2d");
-        this.ctx.scale(devicePixelRatio, devicePixelRatio);
-        this.redraw();
-    }
+// Vue.js component for a klass editor (an SVG-based editor that displays and optional edits a klass layout).
+Vue.component("klass-editor", {
+    // The data section is for variables internal to the component.
+    data: function() {
+        return {
+            seatings: [] // This is used to store Seating objects from server_api.js.
+        }
+    },
+    // These props are parameters set on the klass editor by the page that uses it (via Vue.js bindings).
+    props: {
+        klass_id: Number, // The id of the klass being edited/viewed.
+        editable: Boolean // Whether to allow moving/editing of the klass layout.
+    },
+    // This function runs on initialization.
+    mounted: function() {
+        // JS hackery so that the Vue component object is accessible inside handlers.
+        var self = this;
+        console.log("mounted");
 
-    handleDragStart(event) {
-        var self = event.data;
+        // If the klass_id is -1, we are creating a new klass, so don't try to fetch it.
+        if (self.$props.klass_id == -1) {
+            return;
+        }
 
-        for (var i = 0; i < self.seatings.length; i++) {
-            var seating = self.seatings[i];
-            if (seating.containsPoint(event.offsetX, event.offsetY)) {
-                self.grabbed_seating_offset_x = event.offsetX - seating.desk_x;
-                self.grabbed_seating_offset_y = event.offsetY - seating.desk_y;
-                self.grabbed_seating = i;
-                self.selected_seating = i;
-                if (self.rotate_seating_slider != null) {
-                    self.rotate_seating_slider.value = seating.desk_angle * (180.0 / Math.PI);
-                }
-                break;
+        // Retrieve seatings from the server and put them into this.seatings so that they can be displayed.
+        retrieveSeatings(self.$props.klass_id).then(function(seatings) {
+            self.seatings = seatings;
+            // Calculate where the seatings should be displayed within the SVG and save the result into the Seating objects.
+            for (var i = 0; i < self.seatings.length; i++) {
+                var angle = self.seatings[i].desk_angle;
+                var center_x = self.seatings[i].desk_x + self.seatings[i].desk_width / 2.0;
+                var center_y = self.seatings[i].desk_y + self.seatings[i].desk_height / 2.0;
+                var transformation = `rotate(${angle}, ${center_x}, ${center_y})`;
+                self.seatings[i].setAttribute("transformation", transformation);
             }
-        }
+        });
+    },
+    // The template defines the actual HTML that this component shows.
+    template: `<svg>
+        <g v-for="seating in seatings"
+           :key="seating.seating_id"
+           v-bind:transform="seating.transformation"
+           width="800"
+           height="800">
 
-        self.redraw();
-    }
-
-    handleDrag(event) {
-        var self = event.data;
-
-        if (self.grabbed_seating != -1) {
-            self.seatings[self.grabbed_seating].desk_x = event.offsetX - self.grabbed_seating_offset_x;
-            self.seatings[self.grabbed_seating].desk_y = event.offsetY - self.grabbed_seating_offset_y;
-            self.redraw();
-        }
-    }
-
-    handleDragEnd(event) {
-        var self = event.data;
-
-        self.grabbed_seating = -1;
-    }
-
-    handleRotateSeating(event) {
-        var self = event.data;
-
-        self.seatings[self.selected_seating].desk_angle = parseFloat(self.rotate_seating_slider.value) * Math.PI / 180.0;
-        self.redraw();
-    }
-
-    initializeCanvasHandlers() {
-        $(this.canvas_element).on("mousedown", null, this, this.handleDragStart);
-        $(this.canvas_element).on("mousemove", null, this, this.handleDrag);
-        $(this.canvas_element).on("mouseup", null, this, this.handleDragEnd);
-    }
-
-    constructor(canvas_element, rotate_seating_slider, editable) {
-        // Array of all seatings (Seating objects) being displayed.
-        this.seatings = new Array();
-        // The index (in the this.seatings array) of the seating currently being drag-and-dropped.
-        this.grabbed_seating = -1;
-        // The index (in the this.seatings array) of the seating currently selected (for editing).
-        this.selected_seating = -1;
-        // The offset distance in pixels of the mouse when it grabbed a seating. This is used so that the seating does not "jump" locations  to align its center with the mouse.
-        this.grabbed_seating_offset_x = 0;
-        this.grabbed_seating_offset_y = 0;
-        // The HTML5 <canvas> element.
-        this.canvas_element = canvas_element;
-        // The slider (<input type="range">) used to rotate seats.
-        this.rotate_seating_slider = rotate_seating_slider;
-        if (rotate_seating_slider != null) {
-            this.rotate_seating_slider.min = -180.0;
-            this.rotate_seating_slider.max = 180.0;
-            this.rotate_seating_slider.step = 1.0;
-            this.rotate_seating_slider.value = 0.0;
-            $(this.rotate_seating_slider).on("input", null, this, this.handleRotateSeating);
-        }
-        // Used to calculate clicks and scalings for HiDPI displays.
-        this.devicePixelRatio = 1.0;
-        // Initialize the canvas for HiDPI displays.
-        this.initializeCanvasContextWithDPI(800, 800);
-        // Initialize the mouse interaction handlers for the canvas.
-        if (editable) {
-            this.initializeCanvasHandlers();
-        }
-    }
-
-    addSeating(seating) {
-        this.seatings.push(seating);
-        this.redraw();
-    }
-
-    getSeatings() {
-        return this.seatings;
-    }
-
-    setSeatings(seatings) {
-        this.seatings = seatings;
-        this.redraw();
-    }
-
-    redraw(event) {
-        // JS hackery to allow redraw() to be used as a JQuery event callback with the KlassEditor object passed as "event.data".
-        var self = null;
-        if (event == null) {
-            self = this;
-        }
-        else {
-            self = event.data;
-        }
-        // Clear the canvas.
-        self.ctx.clearRect(0, 0, self.canvas_element.width, self.canvas_element.height);
-
-        // Draw the seats that have already been placed.
-        for (var i = 0; i < self.seatings.length; i++) {
-            // Save the transformation state of the canvas.
-            self.ctx.save();
-            // Find the center point of the seat being drawn.
-            var seating = self.seatings[i];
-            var seating_center_x = seating.desk_x + seating.desk_width / 2.0;
-            var seating_center_y = seating.desk_y + seating.desk_height / 2.0;
-            // Translate the canvas to the center point of the seat being drawn.
-            self.ctx.translate(seating_center_x, seating_center_y);
-            // Rotate the canvas.
-            self.ctx.rotate(seating.desk_angle);
-            // Translate the canvas back to its original location.
-            self.ctx.translate(-seating_center_x, -seating_center_y);
-            // Draw the seat.
-            if (i == self.selected_seating) {
-                self.ctx.strokeStyle = "red";
-            }
-            else {
-                self.ctx.strokeStyle = "#3b5998";
-            }
-            self.ctx.lineWidth = 3;
-            self.ctx.strokeRect(seating.desk_x, seating.desk_y, seating.desk_width, seating.desk_height);
-            self.ctx.font = "14pt Verdana";
-            self.ctx.textAlign = "center";
-            self.ctx.textBaseline = "middle";
-            self.ctx.fillText(seating.student_schedule.student.student_name, seating_center_x, seating_center_y);
-            // Restore the transformation state of the canvas.
-            self.ctx.restore();
-        }
-    }
-}
+        </g>
+    </svg>`
+})

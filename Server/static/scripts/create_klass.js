@@ -5,7 +5,8 @@ const app = new Vue(
             students: [],
             klass_editor_klass_id: -1,
             klass_editor_editable: true,
-            klass_name: ""
+            klass_name: "",
+            rotate_seating_slider_value: 0
         },
         methods: {
             addStudentToSeatingChart: function() {
@@ -18,6 +19,9 @@ const app = new Vue(
                 var seating = new Seating(-1, student_schedule, 200, 200, 200, 100, 0);
                 this.$refs.klass_editor.addSeating(seating);
                 this.students.splice(student_select.selectedIndex, 1);
+            },
+            rotateSelectedSeating: function() {
+                this.$refs.klass_editor.getSelectedSeating().desk_angle = this.rotate_seating_slider_value;
             },
             finishCreatingKlass: function() {
                 if (this.klass_name === "") {

@@ -12,7 +12,6 @@ const app = new Vue(
             deleteClickedAssignment: function(event) {
                 var assignment_index = $(event.target.parentElement).attr("data-assignment-index");
                 // Delete the clicked assignment from the server.
-                console.log(event.target);
                 deleteAssignment(this.assignments[assignment_index].assignment_id);
                 // Remove the clicked assignment from the Vue.js template.
                 this.assignments.splice(assignment_index, 1);

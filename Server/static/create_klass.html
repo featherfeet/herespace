@@ -28,7 +28,7 @@
                 Finish Creating Class
             </button>
             <div class="decorated">
-                <span>Rotate selected seating: </span> <input type="range" v-model="rotate_seating_slider_value" v-on:input="rotateSelectedSeating" min="-180.0" max="180.0" step="1.0" />
+                <span>Rotate selected seating: </span> <input type="range" v-model="rotate_seating_slider_value" v-on:input="rotateSelectedSeating" min="-90.0" max="90.0" step="1.0" />
             </div>
             <br>
             <klass-editor v-bind:klass_id="klass_editor_klass_id" v-bind:editable="klass_editor_editable" ref="klass_editor">

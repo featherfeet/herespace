@@ -45,6 +45,7 @@
             <select id="assignment_select">
                 <option v-for="assignment in assignments" v-bind:value="assignment.assignment_id">{{ assignment.assignment_name }}</option>
             </select>
+            <br>
             <klass-editor v-bind:klass_id="klass_id" v-bind:editable="klass_editor_editable" ref="klass_editor">
             </klass-editor>
         </div>

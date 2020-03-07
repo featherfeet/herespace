@@ -24,6 +24,10 @@ Vue.component("klass-editor", {
         },
         // Methods for the page that includes this component to interact with the seating layout:
         addSeating: function(seating) {
+            if (!this.editable) {
+                console.log("Cannot add seatings to non-editable klass editors.");
+                return;
+            }
             this.seatings.push(seating);
             this.selected_seating_index = this.seatings.length - 1;
         },
@@ -38,6 +42,9 @@ Vue.component("klass-editor", {
         },
         // Handler methods for user interaction with the seating layout:
         handleDragStart: function(event, seating_index) {
+            if (!this.editable) {
+                return;
+            }
             this.grabbed_seating_index = seating_index;
             this.selected_seating_index = seating_index;
             var grabbed_seating = this.seatings[this.grabbed_seating_index];
@@ -48,6 +55,9 @@ Vue.component("klass-editor", {
                                                   };
         },
         handleDrag: function(event) {
+            if (!this.editable) {
+                return;
+            }
             if (this.grabbed_seating_index >= 0 && this.grabbed_seating_index < this.seatings.length) {
                 var grabbed_seating = this.seatings[this.grabbed_seating_index];
                 grabbed_seating.desk_x = this.grabbed_seating_start_location.desk_x + (event.layerX - this.grabbed_seating_start_location.layerX);
@@ -55,6 +65,9 @@ Vue.component("klass-editor", {
             }
         },
         handleDragEnd: function() {
+            if (!this.editable) {
+                return;
+            }
             this.grabbed_seating_index = -1;
         }
     },
@@ -66,7 +79,7 @@ Vue.component("klass-editor", {
     },
     // The template defines the actual HTML that this component shows.
     template: `
-    <svg width="800" height="800" v-on:mousemove="handleDrag" v-on:mouseup="handleDragEnd">
+    <svg width="800" height="800" v-on:mousemove="handleDrag" v-on:mouseup="handleDragEnd" style="display: block;">
         <svg v-for="(seating, seating_index) in seatings"
              v-bind:transform="calculateRotation(seating)"
              v-bind:x="seating.desk_x"
@@ -91,7 +104,15 @@ Vue.component("klass-editor", {
                       v-on:mousedown="handleDragStart($event, seating_index)"
                       rx="15"
                 />
-                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" pointer-events="none">{{ seating.student_schedule.student.student_name }}</text>
+                <text x="50%"
+                      y="50%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      pointer-events="none"
+                      user-select="none"
+                >
+                      {{ seating.student_schedule.student.student_name }}
+                </text>
          </svg>
     </svg>
     `

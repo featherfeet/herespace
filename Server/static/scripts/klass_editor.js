@@ -11,38 +11,48 @@ Vue.component("klass-editor", {
         klass_id: Number, // The id of the klass being edited/viewed.
         editable: Boolean // Whether to allow moving/editing of the klass layout.
     },
+    // The methods are functions used to generate parts of the template. They are also used as event handlers.
+    methods: {
+        calculateRotation: function(seating) {
+            var angle = seating.desk_angle;
+            var center_x = seating.desk_x + seating.desk_width / 2.0;
+            var center_y = seating.desk_y + seating.desk_height / 2.0;
+            return `rotate(${angle}, ${center_x}, ${center_y})`;
+        },
+        addSeating: function(seating) {
+            this.seatings.push(seating);
+        },
+        getSeatings: function() {
+            return this.seatings;
+        },
+        setSeatings: function(seatings) {
+            this.seatings = seatings;
+        }
+    },
     // This function runs on initialization.
     mounted: function() {
         // JS hackery so that the Vue component object is accessible inside handlers.
         var self = this;
         console.log("mounted");
-
-        // If the klass_id is -1, we are creating a new klass, so don't try to fetch it.
-        if (self.$props.klass_id == -1) {
-            return;
-        }
-
-        // Retrieve seatings from the server and put them into this.seatings so that they can be displayed.
-        retrieveSeatings(self.$props.klass_id).then(function(seatings) {
-            self.seatings = seatings;
-            // Calculate where the seatings should be displayed within the SVG and save the result into the Seating objects.
-            for (var i = 0; i < self.seatings.length; i++) {
-                var angle = self.seatings[i].desk_angle;
-                var center_x = self.seatings[i].desk_x + self.seatings[i].desk_width / 2.0;
-                var center_y = self.seatings[i].desk_y + self.seatings[i].desk_height / 2.0;
-                var transformation = `rotate(${angle}, ${center_x}, ${center_y})`;
-                self.seatings[i].setAttribute("transformation", transformation);
-            }
-        });
     },
     // The template defines the actual HTML that this component shows.
-    template: `<svg>
-        <g v-for="seating in seatings"
-           :key="seating.seating_id"
-           v-bind:transform="seating.transformation"
-           width="800"
-           height="800">
-
-        </g>
-    </svg>`
-})
+    template: `
+    <svg width="800" height="800">
+        <svg v-for="seating in seatings"
+             v-bind:transform="calculateRotation(seating)"
+             v-bind:x="seating.desk_x"
+             v-bind:y="seating.desk_y"
+             v-bind:width="seating.desk_width"
+             v-bind:height="seating.desk_height">
+                <rect x="0"
+                      y="0"
+                      v-bind:width="seating.desk_width"
+                      v-bind:height="seating.desk_height"
+                      style="fill: none; stroke-width: 5; stroke: #3b5998"
+                      rx="15"
+                />
+                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{{ seating.student_schedule.student.student_name }}</text>
+         </svg>
+    </svg>
+    `
+});

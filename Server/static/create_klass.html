@@ -31,7 +31,7 @@
                 <span>Rotate selected seating: </span> <input type="range" id="rotate_seating_slider" />
             </div>
             <br>
-            <klass-editor klass_id="-1" editable="true">
+            <klass-editor v-bind:klass_id="klass_editor_klass_id" v-bind:editable="klass_editor_editable" ref="klass_editor">
             </klass-editor>
         </div>
         <script type="text/javascript" src="/static/scripts/vue.js"></script>

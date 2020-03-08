@@ -1,0 +1,8 @@
+Run this JS in the console of the "People" tab on a Google Classroom:
+
+var names = Array.from(document.querySelectorAll("span.y4ihN")).map((elem) => (elem.innerHTML));
+var names_sql_string = "";
+for (var i = 0; i < names.length; i++) {
+    names_sql_string += `INSERT INTO students (student_name, user_id) VALUES ("${names[i]}", 1);\n`;
+}
+console.log(names_sql_string);

@@ -79,7 +79,7 @@ Vue.component("klass-editor", {
     },
     // The template defines the actual HTML that this component shows.
     template: `
-    <svg width="800" height="800" v-on:mousemove="handleDrag" v-on:mouseup="handleDragEnd" style="display: block;">
+    <svg width="2000" height="2000" v-on:mousemove="handleDrag" v-on:mouseup="handleDragEnd" style="display: block;">
         <svg v-for="(seating, seating_index) in seatings"
              v-bind:transform="calculateRotation(seating)"
              v-bind:x="seating.desk_x"

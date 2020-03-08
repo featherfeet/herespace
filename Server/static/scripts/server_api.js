@@ -92,6 +92,28 @@ class Assignment {
     }
 }
 
+// Class to represent a score (one score that a student recieved at a specific time on a specific assignment). A student may have multiple scores per assignment (the one with the highest score_id is the most recent).
+class Score {
+    constructor(score_id, user_id, assignment_id, student_schedule_id, points) {
+        this.score_id = score_id;
+        this.user_id = user_id;
+        this.assignment_id = assignment_id;
+        this.student_schedule_id = student_schedule_id;
+        this.points = points;
+    }
+
+    // Take a raw object (usually one decoded from JSON) and turn it into an Score object (one where methods work).
+    static fromRawObject(raw_score) {
+        return new Score(
+            raw_score.score_id,
+            raw_score.user_id,
+            raw_score.assignment_id,
+            raw_score.student_schedule_id,
+            raw_score.points
+        );
+    }
+}
+
 // Retrieve all students from the server.
 function retrieveStudents() {
     return new Promise(
@@ -170,6 +192,18 @@ function deleteAssignment(assignment_id_to_delete) {
         (resolve, reject) => {
             $.post("/delete_assignment", {assignment_id: assignment_id_to_delete}, function(data) {
                 resolve();
+            });
+        }
+    );
+}
+
+// Retrieve the most recent scores for a specific assignment.
+function retrieveScoresByAssignmentId(assignment_id_to_fetch) {
+    return new Promise(
+        (resolve, reject) => {
+            $.getJSON("/get_scores", {assignment_id: assignment_id_to_fetch}, function(scores_raw) {
+                var scores = scores_raw.map(score_raw => Score.fromRawObject(score_raw));
+                resolve(scores);
             });
         }
     );

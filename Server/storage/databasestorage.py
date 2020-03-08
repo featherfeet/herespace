@@ -243,7 +243,7 @@ class DatabaseStorage:
 
         return assignments
 
-    def setScore(self, user_id, assignment_id, student_schedule_id, points):
+    def addScore(self, user_id, assignment_id, student_schedule_id, points):
         user_id = int(user_id)
         assignment_id = int(assignment_id)
         student_schedule_id = int(student_schedule_id)
@@ -252,9 +252,22 @@ class DatabaseStorage:
         self.cursor.execute("INSERT INTO scores (user_id, assignment_id, student_schedule_id, points) VALUES (?, ?, ?, ?)", (user_id, assignment_id, student_schedule_id, points))
         self.conn_lock.release()
 
-    def getScoresByAssignmentId(self, user_id, assignment_id):
+    def fetchMostRecentScoresByAssignmentId(self, user_id, assignment_id):
+        user_id = int(user_id)
+        assignment_id = int(assignment_id)
         self.conn_lock.acquire()
-        scores_raw = self.cursor.execute("SELECT score_id, student_schedule_id, points FROM scores WHERE user_id = ? AND assignment_id = ?", (user_id, assignment_id))
+        # Since the scores table also stores previous scores (so that a score history can be displayed), this query uses MAX() and GROUP BY to only select the most recent score for each student on the assignment.
+        scores_raw = self.cursor.execute("""SELECT MAX(score_id),
+                                                   student_schedule_id,
+                                                   points
+                                            FROM
+                                                   scores
+                                            WHERE
+                                                   user_id = ?
+                                                   AND
+                                                   assignment_id = ?
+                                            GROUP BY
+                                                   student_schedule_id""", (user_id, assignment_id))
         scores = []
         for score_raw in scores_raw:
             score_id = int(score_raw[0])

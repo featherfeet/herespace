@@ -10,7 +10,6 @@ Vue.component("klass-editor", {
     },
     // These props are parameters set on the klass editor by the page that uses it (via Vue.js bindings).
     props: {
-        klass_id: Number, // The id of the klass being edited/viewed.
         editable: Boolean // Whether to allow moving/editing of the klass layout.
     },
     // The methods are functions used to generate parts of the template. They are also used as event handlers.
@@ -39,6 +38,17 @@ Vue.component("klass-editor", {
         },
         setSeatings: function(seatings) {
             this.seatings = seatings;
+            for (var i = 0; i < seatings.length; i++) {
+                Vue.set(this.seatings[i], "score", 0.0);
+            }
+        },
+        // Methods for the page that includes this component to interact with the scores displayed on the seats:
+        setScores: function(scores) {
+            for (var i = 0; i < scores.length; i++) {
+                var score = scores[i];
+                var seating = this.seatings.find(seating => seating.student_schedule.student_schedule_id == score.student_schedule_id);
+                seating.score = score.points;
+            }
         },
         // Handler methods for user interaction with the seating layout:
         handleDragStart: function(event, seating_index) {
@@ -112,6 +122,15 @@ Vue.component("klass-editor", {
                       user-select="none"
                 >
                       {{ seating.student_schedule.student.student_name }}
+                </text>
+                <text x="50%"
+                      y="70%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      pointer-events="none"
+                      user-select="none"
+                >
+                      SCORE: {{ seating.score }}
                 </text>
          </svg>
     </svg>

@@ -6,7 +6,8 @@ const app = new Vue(
             klass_id: -1,
             assignments: [],
             assignment_to_create_name: "",
-            assignment_to_create_points: ""
+            assignment_to_create_points: "",
+            selected_assignment_id: 0
         },
         methods: {
             deleteClickedAssignment: function(event) {
@@ -24,6 +25,13 @@ const app = new Vue(
                 self.assignment_to_create_points = "";
                 createAssignment(assignment_name, assignment_points, self.klass_id).then(function(assignment_id) {
                     self.assignments.push(new Assignment(assignment_id, -1, self.klass_id, assignment_name, assignment_points));
+                });
+            },
+            assignmentSelected: function() {
+                var self = this;
+                var selected_assignment_id = parseInt($("#assignment_select").val());
+                retrieveScoresByAssignmentId(selected_assignment_id).then(function(scores) {
+                    self.$refs.klass_editor.setScores(scores);
                 });
             }
         },

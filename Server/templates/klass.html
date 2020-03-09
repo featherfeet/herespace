@@ -42,7 +42,7 @@
             <p>
                 Select an assignment to grade:
             </p>
-            <select id="assignment_select">
+            <select id="assignment_select" v-on:input="assignmentSelected">
                 <option v-for="assignment in assignments" v-bind:value="assignment.assignment_id">{{ assignment.assignment_name }}</option>
             </select>
             <br>

@@ -35,8 +35,12 @@ class DatabaseStorage:
         self.conn_lock = threading.Lock()
         self.conn = sqlite3.connect(database_path, check_same_thread = False, isolation_level = None)
         self.cursor = self.conn.cursor()
+        self.conn_lock.acquire()
         # Enable foreign keys so that DELETE CASCADE columns automatically delete all data related to deleted objects (see "createschema.sql").
         self.cursor.execute("PRAGMA foreign_keys = on")
+        # Create the database schema if it doesn't already exist.
+        self.cursor.executescript(open("./createschema.sql").read())
+        self.conn_lock.release()
 
     def loadUser(self, user_id):
         user_id = int(user_id)

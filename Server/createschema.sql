@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS schema_version_data
     schema_version INT
 );
 
-CREATE UNIQUE INDEX schema_unique_index ON schema_version_data (schema_version);
+CREATE UNIQUE INDEX IF NOT EXISTS schema_unique_index ON schema_version_data (schema_version);
 
 INSERT OR IGNORE INTO schema_version_data VALUES (1);
 

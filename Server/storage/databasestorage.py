@@ -250,7 +250,9 @@ class DatabaseStorage:
         points = float(points)
         self.conn_lock.acquire()
         self.cursor.execute("INSERT INTO scores (user_id, assignment_id, student_schedule_id, points) VALUES (?, ?, ?, ?)", (user_id, assignment_id, student_schedule_id, points))
+        score_id = self.cursor.lastrowid
         self.conn_lock.release()
+        return score_id
 
     def fetchMostRecentScoresByAssignmentId(self, user_id, assignment_id):
         user_id = int(user_id)

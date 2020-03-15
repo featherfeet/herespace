@@ -35,6 +35,7 @@ import get_assignments_route
 import create_assignment_route
 import delete_assignment_route
 import get_scores_route
+import add_score_route
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0")

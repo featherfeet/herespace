@@ -208,3 +208,14 @@ function retrieveScoresByAssignmentId(assignment_id_to_fetch) {
         }
     );
 }
+
+// Add a new score to a student's score history on a specific assignment. Returns that score's score_id.
+function addScore(assignment_id, student_schedule_id, points) {
+    return new Promise(
+        (resolve, reject) => {
+            $.post("/add_score", {assignment_id: assignment_id, student_schedule_id: student_schedule_id, points: points}, function(data) {
+                resolve(parseInt(data));
+            });
+        }
+    );
+}

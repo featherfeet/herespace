@@ -7,7 +7,7 @@ const app = new Vue(
             assignments: [],
             assignment_to_create_name: "",
             assignment_to_create_points: "",
-            selected_assignment_id: 0
+            selected_assignment_id: -1
         },
         methods: {
             deleteClickedAssignment: function(event) {
@@ -29,18 +29,20 @@ const app = new Vue(
             },
             assignmentSelected: function() {
                 var self = this;
-                var selected_assignment_id = parseInt($("#assignment_select").val());
-                retrieveScoresByAssignmentId(selected_assignment_id).then(function(scores) {
+                self.selected_assignment_id = parseInt($("#assignment_select").val());
+                retrieveScoresByAssignmentId(self.selected_assignment_id).then(function(scores) {
                     self.$refs.klass_editor.setScores(scores);
                 });
             },
             handleScoreIncremented: function(seating) {
-                console.log("Score incremented.");
-                console.log(seating);
+                console.log(`Score incremented for student "${seating.student_schedule.student.student_name}" on assignment with id ${this.selected_assignment_id}.`);
+                seating.score += 1.0;
+                addScore(this.selected_assignment_id, seating.student_schedule.student_schedule_id, seating.score);
             },
             handleScoreDecremented: function(seating) {
-                console.log("Score decremented.");
-                console.log(seating);
+                console.log(`Score decremented for student "${seating.student_schedule.student.student_name}" on assignment with id ${this.selected_assignment_id}.`);
+                seating.score -= 1.0;
+                addScore(this.selected_assignment_id, seating.student_schedule.student_schedule_id, seating.score);
             }
         },
         mounted: function() {

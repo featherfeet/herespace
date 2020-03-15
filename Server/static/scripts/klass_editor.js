@@ -79,6 +79,12 @@ Vue.component("klass-editor", {
                 return;
             }
             this.grabbed_seating_index = -1;
+        },
+        handleScoreIncremented: function(seating) {
+            this.$emit("score-incremented", seating);
+        },
+        handleScoreDecremented: function(seating) {
+            this.$emit("score-decremented", seating);
         }
     },
     // This function runs on initialization.
@@ -131,6 +137,30 @@ Vue.component("klass-editor", {
                       user-select="none"
                 >
                       SCORE: {{ seating.score }}
+                </text>
+                <text x="20%"
+                      y="70%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      pointer-events="bounding-box"
+                      cursor="pointer"
+                      user-select="none"
+                      fill="green"
+                      v-on:click="handleScoreIncremented(seating)"
+                >
+                      ++
+                </text>
+                <text x="80%"
+                      y="70%"
+                      dominant-baseline="middle"
+                      text-anchor="middle"
+                      pointer-events="bounding-box"
+                      cursor="pointer"
+                      user-select="none"
+                      fill="red"
+                      v-on:click="handleScoreDecremented(seating)"
+                >
+                      --
                 </text>
          </svg>
     </svg>

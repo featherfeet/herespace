@@ -33,6 +33,14 @@ const app = new Vue(
                 retrieveScoresByAssignmentId(selected_assignment_id).then(function(scores) {
                     self.$refs.klass_editor.setScores(scores);
                 });
+            },
+            handleScoreIncremented: function(seating) {
+                console.log("Score incremented.");
+                console.log(seating);
+            },
+            handleScoreDecremented: function(seating) {
+                console.log("Score decremented.");
+                console.log(seating);
             }
         },
         mounted: function() {

@@ -59,3 +59,7 @@ input.wrong {
 .add_plus {
     color: green;
 }
+
+a.buttonlike {
+    text-decoration: none;
+}

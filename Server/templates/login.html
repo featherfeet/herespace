@@ -9,28 +9,31 @@
         </title>
     </head>
     <body>
-        <h1>
-            Login to HereSpace
-        </h1>
-        <form action="/login" method="post">
-            {{ form.csrf_token }}
-            <fieldset>
-                <section>
-                    <div>
-                        {{ form.username.label }}
-                        {{ form.username }}
-                    </div>
-                </section>
-                <section>
-                    <div>
-                        {{ form.password.label }}
-                        {{ form.password }}
-                    </div>
-                </section>
-                <section>
-                    {{ form.submit }}
-                </section>
-            </fieldset>
-        </form>
+        <div id="login_box" class="decorated">
+            <h1>
+                Login to HereSpace
+            </h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li class="flashed_message">
+                                {{ message }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <form action="/login" method="post">
+                {{ form.csrf_token }}
+                {{ form.username }}
+                <br>
+                {{ form.password }}
+                <br>
+                {{ form.submit }}
+            </form>
+            <br>
+            <a href="/signup" id="signup_a">Don't have an account? Sign up here.</a>
+        </div>
     </body>
 </html>

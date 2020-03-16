@@ -101,12 +101,12 @@ Vue.component("klass-editor", {
     // The template defines the actual HTML that this component shows.
     template: `
     <svg width="2000" height="2000" v-on:mousemove="handleDrag" v-on:mouseup="handleDragEnd" style="display: block;">
-        <svg v-for="(seating, seating_index) in seatings"
-             v-bind:transform="calculateRotation(seating)"
-             v-bind:x="seating.desk_x"
-             v-bind:y="seating.desk_y"
-             v-bind:width="seating.desk_width"
-             v-bind:height="seating.desk_height">
+        <g v-for="(seating, seating_index) in seatings"
+           v-bind:transform="calculateRotation(seating)">
+            <svg v-bind:x="seating.desk_x"
+                 v-bind:y="seating.desk_y"
+                 v-bind:width="seating.desk_width"
+                 v-bind:height="seating.desk_height">
                 <rect x="0"
                       y="0"
                       v-if="seating_index == selected_seating_index"
@@ -167,7 +167,8 @@ Vue.component("klass-editor", {
                 >
                       --
                 </text>
-         </svg>
+            </svg>
+        </g>
     </svg>
     `
 });

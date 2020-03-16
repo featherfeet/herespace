@@ -31,6 +31,7 @@ const app = new Vue(
                 var self = this;
                 self.selected_assignment_id = parseInt($("#assignment_select").val());
                 retrieveScoresByAssignmentId(self.selected_assignment_id).then(function(scores) {
+                    self.$refs.klass_editor.clearScores();
                     self.$refs.klass_editor.setScores(scores);
                 });
             },

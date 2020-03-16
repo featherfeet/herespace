@@ -50,6 +50,11 @@ Vue.component("klass-editor", {
                 seating.score = score.points;
             }
         },
+        clearScores: function() {
+            for (var i = 0; i < this.seatings.length; i++) {
+                this.seatings[i].score = 0.0;
+            }
+        },
         // Handler methods for user interaction with the seating layout:
         handleDragStart: function(event, seating_index) {
             if (!this.editable) {

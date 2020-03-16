@@ -67,11 +67,21 @@ class DatabaseStorage:
             return User(user[USERS_TABLE_USER_ID_COLUMN], username, user[USERS_TABLE_PASSWORD_HASHED_AND_SALTED_COLUMN], user[USERS_TABLE_EMAIL_COLUMN], user[USERS_TABLE_USER_TYPE_COLUMN], user[USERS_TABLE_STUDENT_ID_COLUMN], is_authenticated = True, is_active = True, is_anonymous = False)
         return None
 
+    def userExists(self, username):
+        username = str(username)
+        self.conn_lock.acquire()
+        number_of_users = self.cursor.execute("SELECT COUNT(user_id) FROM users WHERE username = ?", (username,)).fetchone()[0]
+        self.conn_lock.release()
+        return number_of_users > 0
+
     def createTeacherUser(self, username, password, email):
         username = str(username)
         password = str(password)
         email = str(email)
-        
+
+        if self.userExists(username):
+            return None
+
         password_hashed_and_salted = pbkdf2_sha512.hash(password)
         self.conn_lock.acquire()
         self.cursor.execute("INSERT INTO users (username, password_hashed_and_salted, email, user_type, student_id) VALUES (?, ?, ?, 'teacher', NULL)", (username, password_hashed_and_salted, email))

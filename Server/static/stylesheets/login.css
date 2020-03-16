@@ -9,10 +9,6 @@
     margin: auto;
 }
 
-fieldset {
-    border: 0;
-}
-
 input#username, input#password {
     display: block;
     border-radius: 30px;

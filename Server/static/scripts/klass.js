@@ -36,11 +36,19 @@ const app = new Vue(
                 });
             },
             handleScoreIncremented: function(seating) {
+                if (this.selected_assignment_id == -1) {
+                    alert("You must create and select an assignment to grade.");
+                    return;
+                }
                 console.log(`Score incremented for student "${seating.student_schedule.student.student_name}" on assignment with id ${this.selected_assignment_id}.`);
                 seating.score += 1.0;
                 addScore(this.selected_assignment_id, seating.student_schedule.student_schedule_id, seating.score);
             },
             handleScoreDecremented: function(seating) {
+                if (this.selected_assignment_id == -1) {
+                    alert("You must create and select an assignment to grade.");
+                    return;
+                }
                 console.log(`Score decremented for student "${seating.student_schedule.student.student_name}" on assignment with id ${this.selected_assignment_id}.`);
                 seating.score -= 1.0;
                 addScore(this.selected_assignment_id, seating.student_schedule.student_schedule_id, seating.score);

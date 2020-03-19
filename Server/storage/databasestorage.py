@@ -294,3 +294,8 @@ class DatabaseStorage:
             scores.append(score)
         self.conn_lock.release()
         return scores
+
+    def close(self):
+        self.conn_lock.acquire()
+        self.conn.close()
+        self.conn_lock.release()

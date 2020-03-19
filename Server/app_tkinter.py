@@ -18,6 +18,8 @@ from threading import Thread
 
 import time
 
+import requests
+
 #=========Database Setup===========
 database_path = Path.home().joinpath("herespace.db")
 database_storage = DatabaseStorage(str(database_path))
@@ -54,6 +56,7 @@ import create_assignment_route
 import delete_assignment_route
 import get_scores_route
 import add_score_route
+import shutdown_route
 
 #===========Tkinter GUI for Launching the App=============
 
@@ -79,6 +82,7 @@ def startServerButtonPressed():
 
 # This callback fires when the Tkinter GUI window is closed.
 def handleWindowDestroy():
+    requests.post("http://localhost:5000/shutdown")
     exit()
 
 # Set up the Tkinter GUI.

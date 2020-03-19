@@ -20,7 +20,8 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 gi.require_version('WebKit2', '4.0')
 from gi.repository import WebKit2
-from gi.repository import GObject
+
+import requests
 
 #=========Database Setup===========
 database_path = Path.home().joinpath("herespace.db")
@@ -58,6 +59,7 @@ import create_assignment_route
 import delete_assignment_route
 import get_scores_route
 import add_score_route
+import shutdown_route
 
 #===========WebKit/GTK GUI To Access the Web App on Desktop=============
 
@@ -67,7 +69,7 @@ def appProcess():
     app.run(host = "127.0.0.1", port = 5000)
 
 def closeApplication(_):
-    app_process.terminate()
+    requests.post("http://localhost:5000/shutdown")
     Gtk.main_quit()
     exit()
 

@@ -1,0 +1,6 @@
+First follow these instructions: https://pygobject.readthedocs.io/en/latest/getting_started.html#windows
+Then, in that MSYS2 64-bit shell, run "pacman -Ss base-devel gcc".
+Then, "python3 -m pip install -r requirements.txt" in herespace/Server.
+If you see a ton of errors, you will need to edit  C:/msys64/mingw64/lib/python3.8/distutils/cygwinccompiler.py
+Find my version of that file in herespace/WindowsStuff and copy across the "OLIVER" section (around line 127) to the corresponding part of the file. You should change the version string 2.34 to whatever version of ld is shown when you run the "ld -v" command.
+Now run the pip install again. There should be no errors.

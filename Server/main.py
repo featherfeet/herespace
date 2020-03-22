@@ -29,6 +29,7 @@ import time
 import requests
 import tkinter
 import webbrowser
+import sys
 
 #===========Tkinter GUI for Launching the App=============
 # This thread runs the Flask app.
@@ -55,7 +56,7 @@ def startServerButtonPressed():
 # This callback fires when the Tkinter GUI window is closed.
 def handleWindowDestroy():
     requests.post("http://localhost:5000/shutdown")
-    exit()
+    sys.exit(0)
 
 root = tkinter.Tk()
 root.title("HereSpace Server Controller")

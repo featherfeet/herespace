@@ -9,14 +9,14 @@ from flask import Flask
 from storage.databasestorage import DatabaseStorage
 
 from pathlib import Path
-
+import os
 
 #=========Database Setup===========
 database_path = Path.home().joinpath("herespace.db")
 database_storage = DatabaseStorage(str(database_path))
 
 #=========Flask Setup==========
-app = Flask(__name__, template_folder = "./templates")
+app = Flask(__name__, template_folder = "templates", root_path = os.getcwd())
 app.config["SECRET_KEY"] = "alsdkjfl;awehjtoipqglkajdsflkasjdfl;lkajwelihwekja;sdl"
 login_manager = LoginManager()
 login_manager.init_app(app)

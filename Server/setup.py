@@ -4,10 +4,11 @@ from cx_Freeze import setup, Executable
 # GUI applications require a different base on Windows (the default is for a
 # console application).
 base = None
-if sys.platform == "win32":
-    base = "Win32GUI"
+# Setting base to Win32GUI supresses the console on Windows but breaks Flask.
+#if sys.platform == "win32":
+#    base = "Win32GUI"
 
-build_exe_options = {"include_files": ["storage/", "createschema.sql", "static/", "templates/"],
+build_exe_options = {"include_files": ["storage", "createschema.sql", "static", "templates"],
                     "packages": ["sqlite3", "passlib"],
                     "includes": ["jinja2.ext"]}
 

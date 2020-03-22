@@ -1,38 +1,18 @@
-#!/usr/bin/env python3
+import sys
+from cx_Freeze import setup, Executable
 
-# Based on https://gmigdos.wordpress.com/2014/06/29/how-to-bundle-python-gtk3-apps-on-windows-with-py2exe/
+# GUI applications require a different base on Windows (the default is for a
+# console application).
+base = None
+if sys.platform == "win32":
+    base = "Win32GUI"
 
-from distutils.core import setup 
-import py2exe 
-import sys, os, site, shutil
-  
-site_dir = site.getsitepackages()[1] 
-include_dll_path = os.path.join(site_dir, "gnome") 
-  
-gtk_dirs_to_include = ['etc', 'lib\\gtk-3.0', 'lib\\girepository-1.0', 'lib\\gio', 'lib\\gdk-pixbuf-2.0', 'share\\glib-2.0', 'share\\fonts', 'share\\icons', 'share\\themes\\Default', 'share\\themes\\HighContrast'] 
-  
-gtk_dlls = [] 
-tmp_dlls = [] 
-cdir = os.getcwd() 
-for dll in os.listdir(include_dll_path): 
-    if dll.lower().endswith('.dll'): 
-        gtk_dlls.append(os.path.join(include_dll_path, dll)) 
-        tmp_dlls.append(os.path.join(cdir, dll)) 
-  
-for dll in gtk_dlls: 
-    shutil.copy(dll, cdir) 
-          
-setup(windows=['app.pyw'], options={ 
-    'py2exe': { 
-        'includes' : ['gi'], 
-        'packages': ['gi'] 
-    } 
-}) 
-  
-dest_dir = os.path.join(cdir, 'dist') 
-for dll in tmp_dlls: 
-    shutil.copy(dll, dest_dir) 
-    os.remove(dll) 
-  
-for d  in gtk_dirs_to_include: 
-    shutil.copytree(os.path.join(site_dir, "gnome", d), os.path.join(dest_dir, d))
+build_exe_options = {"include_files": ["storage/", "createschema.sql", "static/", "templates/"],
+                    "packages": ["sqlite3", "passlib"],
+                    "includes": ["jinja2.ext"]}
+
+setup(  name = "main",
+        version = "0.0.1",
+        description = "Classroom management software.",
+        options = {"build_exe": build_exe_options},
+        executables = [Executable("main.py", base=base)])

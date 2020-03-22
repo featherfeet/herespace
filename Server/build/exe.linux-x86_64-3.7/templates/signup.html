@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/signup.css">
+        <meta charset="utf-8" lang="en" />
+        <title>
+            Sign Up
+        </title>
+    </head>
+    <body>
+        <div id="signup_box" class="decorated">
+            <h1>
+                Sign Up for a New HereSpace Account
+            </h1>
+            <p>
+                Note: This page is for creating new <b>teacher</b> accounts only. If you are a student and you want an account to view your scores, please ask your teacher to issue you one.
+            </p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li class="flashed_message">
+                                {{ message }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <form action="/signup" method="post">
+                {{ form.csrf_token }}
+                {{ form.username }}
+                <br>
+                {{ form.password }}
+                <br>
+                {{ form.email }}
+                <br>
+                {{ form.submit }}
+            </form>
+            <br>
+            <a href="/login" id="login_a">Already have an account? Log in here.</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/global.css">
+        <link rel="stylesheet" type="text/css" href="/static/stylesheets/login.css">
+        <meta charset="utf-8" lang="en" />
+        <title>
+            Login to HereSpace
+        </title>
+    </head>
+    <body>
+        <div id="login_box" class="decorated">
+            <h1>
+                Login to HereSpace
+            </h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li class="flashed_message">
+                                {{ message }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <form action="/login" method="post">
+                {{ form.csrf_token }}
+                {{ form.username }}
+                <br>
+                {{ form.password }}
+                <br>
+                {{ form.submit }}
+            </form>
+            <br>
+            <a href="/signup" id="signup_a">Don't have an account? Sign up here.</a>
+        </div>
+    </body>
+</html>

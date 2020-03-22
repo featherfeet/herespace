@@ -1,4 +1,4 @@
-from __main__ import app, database_storage
+from app import app, database_storage
 from flask import request
 
 @app.route("/shutdown", methods = ["POST"])

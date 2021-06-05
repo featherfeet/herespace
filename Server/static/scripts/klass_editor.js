@@ -1,4 +1,4 @@
-// Vue.js component for a klass editor (an SVG-based editor that displays and optional edits a klass layout).
+// Vue.js component for a klass editor (an SVG-based editor that displays and optionally edits a klass layout).
 Vue.component("klass-editor", {
     // The data section is for variables internal to the component.
     data: function() {

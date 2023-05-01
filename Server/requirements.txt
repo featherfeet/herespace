@@ -1,6 +1,6 @@
 passlib==1.7.2
 werkzeug<1.0.0
-Flask==1.1.1
+Flask==2.3.2
 Flask-Login==0.4.1
 Flask-WTF==0.14.2
 selenium==3.141.0
